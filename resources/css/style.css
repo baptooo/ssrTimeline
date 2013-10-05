@@ -1,0 +1,173 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, sass/style.scss */
+.pattern, .bg-paralax, .elts-anim .elt, .pin .layer1, .pin .layer2 .shape {
+  background: url("../imgs/pattern.jpg");
+}
+
+/* line 11, sass/style.scss */
+.pattern2, .pin .layer1 .shape, .pin .layer2 {
+  background: url("../imgs/pattern2.jpg");
+}
+
+/* line 15, sass/style.scss */
+.blank-area, .title-anim {
+  width: 100%;
+  height: 600px;
+}
+
+/* line 20, sass/style.scss */
+.title-anim {
+  border-bottom: 10px solid #ccc;
+}
+/* line 24, sass/style.scss */
+.title-anim h1 {
+  font-family: Arial;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: relative;
+  top: 250px;
+}
+/* line 33, sass/style.scss */
+.title-anim h1:after {
+  content: "";
+  display: block;
+  width: 150px;
+  border-bottom: 1px solid #f50;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  margin-left: -75px;
+}
+
+/* line 46, sass/style.scss */
+.bg-paralax {
+  height: 500px;
+}
+
+/* line 51, sass/style.scss */
+.elts-anim {
+  height: 500px;
+  text-align: center;
+}
+/* line 55, sass/style.scss */
+.elts-anim .elts {
+  margin-top: 40px;
+}
+/* line 58, sass/style.scss */
+.elts-anim .elt {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  display: inline-block;
+}
+
+/* line 67, sass/style.scss */
+.pin {
+  width: 100%;
+  position: relative;
+}
+/* line 70, sass/style.scss */
+.pin .shape {
+  position: absolute;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  width: 500px;
+  height: 500px;
+  border-radius: 250px;
+}
+/* line 80, sass/style.scss */
+.pin .layer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 87, sass/style.scss */
+.pin .layer1 .shape {
+  border: 10px solid #cc8871;
+}
+/* line 93, sass/style.scss */
+.pin .layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 99, sass/style.scss */
+.pin .layer2 .shape {
+  border: 10px solid #1c869c;
+}

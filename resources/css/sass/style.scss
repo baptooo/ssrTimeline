@@ -1,0 +1,104 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+.pattern {
+  background: url('../imgs/pattern.jpg');
+}
+.pattern2 {
+  background: url('../imgs/pattern2.jpg');
+}
+
+.blank-area {
+  width: 100%;
+  height: 600px;
+}
+
+.title-anim {
+  @extend .blank-area;
+  border-bottom: 10px solid #ccc;
+  
+  h1 {
+    font-family: Arial;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+    position: relative;
+    top: 250px;
+    
+    &:after {
+      content: "";
+      display: block;
+      width: 150px;
+      border-bottom: 1px solid #f50;
+      position: absolute;
+      left: 50%;
+      top: 80px;
+      margin-left: -75px;
+    }
+  }
+}
+
+.bg-paralax {
+  @extend .pattern;
+  height: 500px;  
+}
+
+.elts-anim {
+  height: 500px;
+  text-align: center;
+  
+  .elts {
+    margin-top: 40px;
+  }
+  .elt {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    @extend .pattern;
+    display: inline-block;
+  }
+}
+
+.pin {
+  width: 100%;  position: relative;
+  
+  .shape {
+    position: absolute;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+  }
+  
+  .layer1 {
+    @extend .pattern;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    
+    .shape {
+      @extend .pattern2;
+      border: 10px solid #cc8871;
+    }
+  }
+  
+  .layer2 {
+    @extend .pattern2;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
+    .shape {
+      @extend .pattern;
+      border: 10px solid #1c869c;
+    }
+  }
+}
