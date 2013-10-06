@@ -48,7 +48,7 @@
         scrollTop = Math.max(0, Math.min($(document).height(), scrollTop + gap));
         animating = true;
         
-        if('TweenMax' in window) {
+        if(!attachEvent && 'TweenMax' in window) {
             tm && tm.pause();
             tm = TweenMax.to('html,body', 1, {
                 scrollTop: scrollTop,

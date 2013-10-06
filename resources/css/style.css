@@ -67,76 +67,178 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, sass/style.scss */
+/* line 27, sass/_pie.scss */
+.pie-element, .bordered, .gradient, .elts-anim .elt {
+  behavior: url("/./PIE.htc");
+  position: relative;
+}
+
+/* line 33, sass/_pie.scss */
+.bordered {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 38, sass/_pie.scss */
+.gradient {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff0000), color-stop(100%, #0000ff));
+  background: -webkit-linear-gradient(#ff0000, #0000ff);
+  background: -moz-linear-gradient(#ff0000, #0000ff);
+  background: -o-linear-gradient(#ff0000, #0000ff);
+  -pie-background: linear-gradient(#ff0000, #0000ff);
+  background: linear-gradient(#ff0000, #0000ff);
+}
+
+/* line 52, sass/_pie.scss */
+.pie-container, .widget {
+  z-index: 0;
+  position: relative;
+}
+
+/* line 56, sass/_pie.scss */
+.z-pie-element, .widget h3 {
+  behavior: url("/./PIE.htc");
+  z-index: 0;
+}
+
+/* line 71, sass/_pie.scss */
+.has-gradient {
+  behavior: url("/./PIE.htc");
+  position: relative;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff0000), color-stop(100%, #0000ff));
+  background: -webkit-linear-gradient(#ff0000, #0000ff);
+  background: -moz-linear-gradient(#ff0000, #0000ff);
+  background: -o-linear-gradient(#ff0000, #0000ff);
+  -pie-background: linear-gradient(#ff0000, #0000ff);
+  background: linear-gradient(#ff0000, #0000ff);
+}
+
+/* line 9, sass/style.scss */
+body {
+  overflow-x: hidden;
+  height: 9334px;
+}
+
+/* line 14, sass/style.scss */
 .pattern, .bg-paralax, .elts-anim .elt, .pin .layer1, .pin .layer2 .shape {
   background: url("../imgs/pattern.jpg");
 }
 
-/* line 11, sass/style.scss */
+/* line 17, sass/style.scss */
 .pattern2, .pin .layer1 .shape, .pin .layer2 {
   background: url("../imgs/pattern2.jpg");
 }
 
-/* line 15, sass/style.scss */
+/* line 20, sass/style.scss */
+.pattern3, .documentation {
+  background: url("../imgs/pattern3.jpg");
+}
+
+/* line 23, sass/style.scss */
+.pattern4 {
+  background: url("../imgs/pattern4.jpg");
+}
+
+/* line 27, sass/style.scss */
 .blank-area, .title-anim {
   width: 100%;
   height: 600px;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 20, sass/style.scss */
-.title-anim {
-  border-bottom: 10px solid #ccc;
+/* line 33, sass/style.scss */
+code {
+  padding: 15px;
+  display: block;
 }
-/* line 24, sass/style.scss */
-.title-anim h1 {
-  font-family: Arial;
+/* line 37, sass/style.scss */
+code pre {
+  font-family: "Courier New";
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #F5F5F5;
+  border: 1px solid #CCC;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 57, sass/style.scss */
+.title {
+  font-family: 'Lobster';
   text-align: center;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 24px;
+  color: #1C869C;
+  font-size: 45px;
   position: relative;
+}
+
+/* line 68, sass/style.scss */
+.title-anim .main-title, .title-anim .elts-anim h2, .elts-anim .title-anim h2 {
   top: 250px;
 }
-/* line 33, sass/style.scss */
-.title-anim h1:after {
+/* line 71, sass/style.scss */
+.title-anim .main-title:after, .title-anim .elts-anim h2:after, .elts-anim .title-anim h2:after {
   content: "";
   display: block;
   width: 150px;
-  border-bottom: 1px solid #f50;
+  border-bottom: 10px solid #cc8871;
   position: absolute;
   left: 50%;
-  top: 80px;
+  top: 150px;
   margin-left: -75px;
 }
 
-/* line 46, sass/style.scss */
+/* line 84, sass/style.scss */
 .bg-paralax {
   height: 500px;
+  border-top: 10px solid #1C869C;
+  border-bottom: 10px solid #1C869C;
 }
 
-/* line 51, sass/style.scss */
+/* line 91, sass/style.scss */
 .elts-anim {
   height: 500px;
   text-align: center;
+  padding-top: 40px;
+  border-bottom: 10px solid #1C869C;
+  overflow: hidden;
 }
-/* line 55, sass/style.scss */
-.elts-anim .elts {
-  margin-top: 40px;
-}
-/* line 58, sass/style.scss */
+/* line 98, sass/style.scss */
 .elts-anim .elt {
   width: 250px;
   height: 250px;
   border-radius: 250px;
   display: inline-block;
+  border-top: 5px solid #1C869C;
+  border-left: 100px solid #1C869C;
+  border-bottom: 20px solid #1C869C;
+}
+/* line 110, sass/style.scss */
+.elts-anim h2 {
+  top: 45px;
+  color: #cc8871;
 }
 
-/* line 67, sass/style.scss */
+/* line 117, sass/style.scss */
 .pin {
   width: 100%;
   position: relative;
+  overflow: hidden;
+  border-bottom: 10px solid #CC8871;
 }
-/* line 70, sass/style.scss */
+/* line 122, sass/style.scss */
 .pin .shape {
   position: absolute;
   left: 50%;
@@ -146,7 +248,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 500px;
   border-radius: 250px;
 }
-/* line 80, sass/style.scss */
+/* line 132, sass/style.scss */
 .pin .layer1 {
   position: absolute;
   top: 0;
@@ -155,11 +257,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 100%;
   overflow: hidden;
 }
-/* line 87, sass/style.scss */
+/* line 139, sass/style.scss */
 .pin .layer1 .shape {
-  border: 10px solid #cc8871;
+  border-right: 5px solid #cc8871;
+  border-left: 20px solid #cc8871;
+  border-bottom: 100px solid #cc8871;
 }
-/* line 93, sass/style.scss */
+/* line 147, sass/style.scss */
 .pin .layer2 {
   position: absolute;
   top: 0;
@@ -167,7 +271,75 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 100%;
   height: 100%;
 }
-/* line 99, sass/style.scss */
+/* line 153, sass/style.scss */
 .pin .layer2 .shape {
-  border: 10px solid #1c869c;
+  border-right: 5px solid #1C869C;
+  border-left: 20px solid #1C869C;
+  border-bottom: 100px solid #1C869C;
+}
+
+/* line 162, sass/style.scss */
+.pin-letter {
+  position: relative;
+  width: 100%;
+}
+/* line 166, sass/style.scss */
+.pin-letter .letter {
+  color: #877529;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+/* line 176, sass/style.scss */
+.documentation {
+  position: relative;
+  height: 600px;
+  padding: 200px 50px 50px 50px;
+  border-top: 10px solid #b3a362;
+  border-bottom: 10px solid #CC8871;
+}
+/* line 184, sass/style.scss */
+.documentation code {
+  padding: 15px 0 0 0;
+}
+
+/* line 189, sass/style.scss */
+.credits {
+  height: 600px;
+  padding-top: 150px;
+  text-align: center;
+}
+/* line 194, sass/style.scss */
+.credits .title {
+  height: 50px;
+  padding: 50px;
+  color: #9a543c;
+  background: #fff;
+  border-radius: 15px 15px 0 0;
+  text-decoration: none;
+  position: relative;
+}
+/* line 203, sass/style.scss */
+.credits .title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 0 0 15px 15px;
+  width: 0;
+  height: 10px;
+  background: #9a543c;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  -msie-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+/* line 221, sass/style.scss */
+.credits .title:hover:after {
+  width: 100%;
 }

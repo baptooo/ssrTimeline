@@ -16,13 +16,14 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 	</head>
 
 	<body>
 		<div id="content">
 			<div class="title-anim">
-			    <h1>jQuery SsrTimeline Plugin for Superscrollorama</h1>
+			    <h2 class="title main-title">jQuery SsrTimeline Helper<br /> for Superscrollorama</h2>
 			</div>
 			<div class="bg-paralax"></div>
 			<div class="elts-anim">
@@ -32,6 +33,7 @@
 			        <li class="elt"></li>
 			        <li class="elt"></li>
 			    </ul>
+			    <h2 class="title">CreateTween and Pin methods support</h2>
 			</div>
 			<div class="pin">
 			    <div class="layer2">
@@ -41,17 +43,70 @@
 			        <div class="shape"></div>
 			    </div>
 			</div>
-			<div class="blank-area"></div>
-			<div class="blank-area"></div>
-			<div class="blank-area"></div>
-		</div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="resources/js/jquery.superscrollorama.js"></script>
-		<script type="text/javascript" src="resources/js/polyfill.requestAnimationFrame.js"></script>
-		<script type="text/javascript" src="resources/js/jquery.smoothwheel.js"></script>
-		<script type="text/javascript" src="resources/js/greensock/TimelineLite.min.js"></script>
-		<script type="text/javascript" src="resources/js/greensock/TweenMax.min.js"></script>
-		<script type="text/javascript" src="resources/js/jQuery.superscrollorama.ssrTimeline.js"></script>
-		<script type="text/javascript" src="resources/js/script.js"></script>
+			<div class="pin-letter pattern4">
+			    <h1 class="title letter">s</h1>
+			    <h1 class="title letter">s</h1>
+			    <h1 class="title letter">r</h1>
+			    <h1 class="title letter">T</h1>
+			    <h1 class="title letter">i</h1>
+			    <h1 class="title letter">m</h1>
+			    <h1 class="title letter">e</h1>
+			    <h1 class="title letter">l</h1>
+			    <h1 class="title letter">i</h1>
+			    <h1 class="title letter">n</h1>
+			    <h1 class="title letter">e</h1>
+			</div>
+			<div class="documentation">
+			    <h2 class="title">Documentation</h2>
+<code type="text/javascript">
+<pre>
+function ssrTimeline(anims, controller, settings);
+@anims: [] Array of animations
+   @animation: {
+       type: {String} TweenMax method (fromTo, to, from, etc.)
+       loopDelay: {Number} specific parameter to ssrTimeline, will add a
+                  progressive delay for each targetted elements
+       options: {Array} [selector, duration, params] Params for TweenMax method,
+                selector will be restrained to parent $(selector, parent) where
+                parent is the element which ssrTimeline was called $(parent).ssrTimeline();
+   }
+   @controller: superscrollorama controller instance ($.superscrollorama({}))
+   @settings: {
+       pin: {Number} This param will call $ssr.pin method instead of $ssr.addTween
+       duration: {Number} duration of the animation in pixels
+       offset: {Number} offset of the animation in pixels
+   }
+</pre>
+</code>		    
+
+<code type="text/javascript">
+<pre>
+$('.documentation').ssrTimeline([
+    {
+        type: 'fromTo',
+        loopDelay
+        options: ['code', .5, {
+            css: { x: -150, opacity: 0 }
+        }, {
+            css: { x: 0, opacity: 1 }
+        }]
+    }
+]);
+</pre>
+</code>
+    	    </div>
+    	    <div class="credits pattern2">
+    	        <a class="title" href="http://github.com/baptooo/ssrTimeline">github.com/baptooo/ssrTimeline</a>
+    	    </div>
+    	</div>
+		
+    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="resources/js/jquery.superscrollorama.js"></script>
+    	<script type="text/javascript" src="resources/js/polyfill.requestAnimationFrame.js"></script>
+    	<script type="text/javascript" src="resources/js/jquery.smoothwheel.js"></script>
+    	<script type="text/javascript" src="resources/js/greensock/TimelineLite.min.js"></script>
+    	<script type="text/javascript" src="resources/js/greensock/TweenMax.min.js"></script>
+    	<script type="text/javascript" src="resources/js/jQuery.superscrollorama.ssrTimeline.js"></script>
+    	<script type="text/javascript" src="resources/js/script.js"></script>
 	</body>
 </html>

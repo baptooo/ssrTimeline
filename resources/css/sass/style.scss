@@ -4,6 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "pie";
+
+body {
+  overflow-x: hidden;
+  height: 9334px;
+}
 
 .pattern {
   background: url('../imgs/pattern.jpg');
@@ -11,33 +17,65 @@
 .pattern2 {
   background: url('../imgs/pattern2.jpg');
 }
+.pattern3 {
+  background: url('../imgs/pattern3.jpg');
+}
+.pattern4 {
+  background: url('../imgs/pattern4.jpg');
+}
 
 .blank-area {
   width: 100%;
   height: 600px;
+  margin: 0; padding: 0;
+}
+
+code {
+  padding: 15px;
+  display: block;
+  
+  pre {
+    font-family: "Courier New";
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #F5F5F5;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+}
+
+.title {
+  font-family: 'Lobster';
+  text-align: center;
+  color: #1C869C;
+  font-size: 45px;
+  position: relative;
 }
 
 .title-anim {
   @extend .blank-area;
-  border-bottom: 10px solid #ccc;
   
-  h1 {
-    font-family: Arial;
-    text-align: center;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 24px;
-    position: relative;
+  .main-title{
     top: 250px;
     
     &:after {
       content: "";
       display: block;
       width: 150px;
-      border-bottom: 1px solid #f50;
+      border-bottom: 10px solid #cc8871;
       position: absolute;
       left: 50%;
-      top: 80px;
+      top: 150px;
       margin-left: -75px;
     }
   }
@@ -45,27 +83,41 @@
 
 .bg-paralax {
   @extend .pattern;
-  height: 500px;  
+  height: 500px;
+  border-top: 10px solid #1C869C;
+  border-bottom: 10px solid #1C869C;
 }
 
 .elts-anim {
   height: 500px;
   text-align: center;
+  padding-top: 40px;
+  border-bottom: 10px solid #1C869C;
+  overflow: hidden;
   
-  .elts {
-    margin-top: 40px;
-  }
   .elt {
+    @include pie;
+    @extend .pattern;
     width: 250px;
     height: 250px;
     border-radius: 250px;
-    @extend .pattern;
     display: inline-block;
+    border-top: 5px solid #1C869C;
+    border-left: 100px solid #1C869C;
+    border-bottom: 20px solid #1C869C;
+  }
+  
+  h2 {
+    @extend .main-title;
+    top: 45px;
+    color: #cc8871;
   }
 }
 
 .pin {
   width: 100%;  position: relative;
+  overflow: hidden;
+  border-bottom: 10px solid #CC8871;
   
   .shape {
     position: absolute;
@@ -86,7 +138,9 @@
     
     .shape {
       @extend .pattern2;
-      border: 10px solid #cc8871;
+      border-right: 5px solid #cc8871;
+      border-left: 20px solid #cc8871;
+      border-bottom: 100px solid #cc8871;
     }
   }
   
@@ -98,7 +152,75 @@
     
     .shape {
       @extend .pattern;
-      border: 10px solid #1c869c;
+      border-right: 5px solid #1C869C;
+      border-left: 20px solid #1C869C;
+      border-bottom: 100px solid #1C869C;
+    }
+  }
+}
+
+.pin-letter {
+  position: relative;
+  width: 100%;
+  
+  .letter {
+    color: #877529;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+}
+
+.documentation {
+  @extend .pattern3;
+  position: relative;
+  height: 600px;
+  padding: 200px 50px 50px 50px;
+  border-top: 10px solid #b3a362;
+  border-bottom: 10px solid #CC8871;
+  
+  code {
+    padding: 15px 0 0 0;
+  }
+}
+
+.credits {
+  height: 600px;
+  padding-top: 150px;
+  text-align: center;
+  
+  .title {
+    height: 50px;
+    padding: 50px;
+    color: #9a543c;
+    background: #fff;
+    border-radius: 15px 15px 0 0;
+    text-decoration: none;
+    position: relative;
+    
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -10px; left: 0;
+      border-radius: 0 0 15px 15px;
+      width: 0;
+      height: 10px;
+      background: #9a543c;
+      
+      -webkit-transition: all .5s ease-out;
+      -moz-transition: all .5s ease-out;
+      -o-transition: all .5s ease-out;
+      -msie-transition: all .5s ease-out;
+      transition: all .5s ease-out;
+    }
+    
+    &:hover {
+       &:after {
+          width: 100%
+       }
     }
   }
 }
