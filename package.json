@@ -1,0 +1,18 @@
+{
+  "name": "ssrTimeline",
+  "version": "0.0.0",
+  "description": "ssrTimeline\r ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baptooo/ssrTimeline.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/baptooo/ssrTimeline/issues"
+  }
+}
